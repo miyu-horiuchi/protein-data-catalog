@@ -8,25 +8,26 @@
     body { font: 15px/1.5 system-ui, sans-serif; margin: 2rem auto; padding-inline: 1rem; max-width: 78rem; }
     h2 { margin-top: 2rem; }
     h3 { margin-top: 1.5rem; }
+    .table-scroll { max-width: 100%; overflow-x: auto; }
     table { width: 100%; border-collapse: collapse; }
-    th, td { padding: .5rem .65rem; border: 1px solid #d1d5db; text-align: left; vertical-align: top; overflow-wrap: anywhere; }
+    th, td { padding: .5rem .65rem; border: 1px solid #d1d5db; text-align: left; vertical-align: top; white-space: nowrap; }
     th { background: #f3f4f6; }
-    table:first-of-type :is(th, td):first-child { width: 1%; white-space: nowrap; overflow-wrap: normal; }
   </style>
 </head>
 <body>
+<p>Scroll each table sideways to see every column.</p>
 <h1>Public data for PPARγ, GCK, AURKA, and ERK2</h1>
 <p>Checked 18 November 2026. Key workbooks, spectra, curves, and the Lake supplement were opened directly. Large archive links come from repository manifests. PDB coverage uses PDBe UniProt mappings and RCSB metadata. The PDB index includes complexes and fragments.</p>
 <h2>Availability by target</h2>
-<table><thead><tr><th scope="col">Target</th><th scope="col">Available data</th><th scope="col">Published results and gaps</th><th scope="col">Key links</th></tr></thead><tbody>
+<div class="table-scroll" tabindex="0"><table><thead><tr><th scope="col">Target</th><th scope="col">Available data</th><th scope="col">Published results and gaps</th><th scope="col">Key links</th></tr></thead><tbody>
 <tr><td>PPARγ</td><td>Apo LBD HDX-MS, inverse-agonist HDX-MS, SEC-SAXS for full-length and truncated constructs, and NMR assignments for isolated AB and ligand-bound LBD.</td><td>Published apo ¹⁹F exchange at 1.0 s⁻¹. Raw CEST series was not located.</td><td><a href="https://ftp.pride.ebi.ac.uk/pride/data/archive/2020/01/PXD016401/">Apo HDX files</a> · <a href="https://ftp.pride.ebi.ac.uk/pride/data/archive/2025/11/PXD066095/">Inverse-agonist HDX files</a> · <a href="https://www.sasbdb.org/media/intensities_files/SASDWX3.dat">Full-length SAXS .dat</a></td></tr>
 <tr><td>GCK</td><td>Human apo and glucose-bound coordinates, NMR supplementary figures and tables, and separate variant activity and abundance scores.</td><td>The primary CPMG fit is 509 ± 51 s⁻¹ and 16.5 ± 1.7% excited state at 313 K. Human solution SAXS and HDX are published. Public raw dispersion profiles, SAXS curves, and HDX runs were not located.</td><td><a href="https://files.rcsb.org/download/1V4T.cif">1V4T apo mmCIF</a> · <a href="https://files.rcsb.org/download/3IDH.cif">3IDH glucose-bound mmCIF</a> · <a href="https://pmc-oa-opendata.s3.amazonaws.com/PMC4587531.1/PMC4587531.1.txt">2015 primary CPMG text</a></td></tr>
 <tr><td>AURKA</td><td>Public single-molecule fluorescence and dwell-time archives, human kinase-domain SAXS, and raw and processed HDX-MS.</td><td>Lake’s TR-FRET distances are in figures. The supplement contains numeric cooperativity factors for 24 inhibitors and the lifetime model. Per-well waveforms were not located.</td><td><a href="https://pmc-oa-opendata.s3.amazonaws.com/PMC6304972.1/pnas.1811158115.sapp.pdf">Lake supplement PDF</a> · <a href="https://zenodo.org/records/825693">Single-molecule data</a> · <a href="https://zenodo.org/records/825752">Dwell-time data</a> · <a href="https://zenodo.org/records/2555379">Unphosphorylated series</a></td></tr>
 <tr><td>ERK2</td><td>Rat apo 0P and 2P HDX uptake and representative raw spectra, plus apo and inhibitor NMR spectra and chemical-shift tables.</td><td>Rat TEY sites are T183/Y185. Human sites are T185/Y187. The public inhibitor workbook excludes SCH772984. Xiao’s 2014 CPMG and free ERK2 SAXS curves were not located as downloadable numeric data.</td><td><a href="https://ftp.pride.ebi.ac.uk/pride/data/archive/2024/03/PXD048311/HDX_Uptakedata_Inhs1-17_ATG017_BVD523_VTX11e_GDC0994.xlsx">HDX uptake workbook</a> · <a href="https://bmrbig.bmrb.io/deposition/released/96/Apo.ft2">Apo NMR .ft2</a> · <a href="https://bmrbig.bmrb.io/deposition/released/96/PeakAssignments_ChemicalShiftPertubations.xlsx">NMR peak table</a></td></tr>
-</tbody></table>
+</tbody></table></div>
 <h2>PPARγ</h2>
 <h3>Sources and datasets (31)</h3>
-<table><thead><tr><th scope="col">Target</th><th scope="col">Record</th><th scope="col">Method</th><th scope="col">Available data</th><th scope="col">Sample or coverage</th><th scope="col">Source</th></tr></thead><tbody>
+<div class="table-scroll" tabindex="0"><table><thead><tr><th scope="col">Target</th><th scope="col">Record</th><th scope="col">Method</th><th scope="col">Available data</th><th scope="col">Sample or coverage</th><th scope="col">Source</th></tr></thead><tbody>
 <tr><td>PPARγ</td><td>Chrisman et al. 2018</td><td>NMR / CEST</td><td>Two resolved apo peaks exchange at 1.0 s⁻¹ (95% CI 0.9–1.1), 298.2 K.</td><td>Rate comes from the engineered, fluorine-labelled C313A/Q322C-BTFA LBD reporter. See Supplementary Fig. 12c. Raw CEST series not located.</td><td><a href="https://www.nature.com/articles/s41467-018-04176-x">Open source</a></td></tr>
 <tr><td>PPARγ</td><td>PXD016401</td><td>HDX-MS / NMR</td><td>Raw HDX-MS, including isolated apo LBD vs T0070907 and SR10221 comparisons.</td><td>Paired paper and processed source workbook provide the context.</td><td><a href="https://www.ebi.ac.uk/pride/archive/projects/PXD016401">Open source</a></td></tr>
 <tr><td>PPARγ</td><td>Shang et al. 2019</td><td>HDX-MS / NMR</td><td>NMR and HDX figure source workbook, including apo-versus-T0070907 HDX.</td><td>Source values and raw HDX are separate downloads.</td><td><a href="https://www.nature.com/articles/s41467-019-13768-0">Open source</a></td></tr>
@@ -58,9 +59,9 @@
 <tr><td>PPARγ</td><td>PXD016401 file index</td><td>Download directory</td><td>HTTP directory of all files in the archive release.</td><td>Direct links for each file are in Individual downloads.</td><td><a href="https://ftp.pride.ebi.ac.uk/pride/data/archive/2020/01/PXD016401/">Open source</a></td></tr>
 <tr><td>PPARγ</td><td>PXD066095 file index</td><td>Download directory</td><td>HTTP directory of all files in the archive release.</td><td>Direct links for each file are in Individual downloads.</td><td><a href="https://ftp.pride.ebi.ac.uk/pride/data/archive/2025/11/PXD066095/">Open source</a></td></tr>
 <tr><td>PPARγ</td><td>UniProt P37231</td><td>Sequence</td><td>Canonical sequence and annotation.</td><td>Use species and exact construct when matching measurements.</td><td><a href="https://www.uniprot.org/uniprotkb/P37231/entry">Open source</a></td></tr>
-</tbody></table>
+</tbody></table></div>
 <h3>Individual files (657)</h3>
-<table><thead><tr><th scope="col">Target</th><th scope="col">Record</th><th scope="col">File</th><th scope="col">Contents</th><th scope="col">Size (bytes)</th></tr></thead><tbody>
+<div class="table-scroll" tabindex="0"><table><thead><tr><th scope="col">Target</th><th scope="col">Record</th><th scope="col">File</th><th scope="col">Contents</th><th scope="col">Size (bytes)</th></tr></thead><tbody>
 <tr><td>PPARγ</td><td>Chrisman 2018</td><td><a href="https://static-content.springer.com/esm/art%3A10.1038%2Fs41467-018-04176-x/MediaObjects/41467_2018_4176_MOESM1_ESM.pdf">Supplementary Information</a></td><td>Fig. 12c contains apo saturation transfer</td><td>—</td></tr>
 <tr><td>PPARγ</td><td>Shang 2019</td><td><a href="https://static-content.springer.com/esm/art%3A10.1038%2Fs41467-019-13768-0/MediaObjects/41467_2019_13768_MOESM4_ESM.xlsx">Source Data XLSX</a></td><td>Downloaded. Contains Sup Figure 8 (Apo vs T007), among 21 sheets.</td><td>—</td></tr>
 <tr><td>PPARγ</td><td>Figshare 29538518</td><td><a href="https://ndownloader.figshare.com/files/59582810">SourceData.7z</a></td><td>Source data archive</td><td>141,231,593</td></tr>
@@ -718,9 +719,9 @@
 <tr><td>PPARγ</td><td>PXD066095</td><td><a href="https://ftp.pride.ebi.ac.uk/pride/data/archive/2025/11/PXD066095/SR38225.csv">SR38225.csv</a></td><td>Processed data or analysis table</td><td>—</td></tr>
 <tr><td>PPARγ</td><td>PXD066095</td><td><a href="https://ftp.pride.ebi.ac.uk/pride/data/archive/2025/11/PXD066095/SR38227.csv">SR38227.csv</a></td><td>Processed data or analysis table</td><td>—</td></tr>
 <tr><td>PPARγ</td><td>PXD066095</td><td><a href="https://ftp.pride.ebi.ac.uk/pride/data/archive/2025/11/PXD066095/checksum.txt">checksum.txt</a></td><td>Associated project file</td><td>—</td></tr>
-</tbody></table>
+</tbody></table></div>
 <h3>PDB records (380)</h3>
-<table><thead><tr><th scope="col">Species / UniProt</th><th scope="col">PDB</th><th scope="col">Sample or classification</th><th scope="col">Technical details</th><th scope="col">Coordinates</th></tr></thead><tbody>
+<div class="table-scroll" tabindex="0"><table><thead><tr><th scope="col">Species / UniProt</th><th scope="col">PDB</th><th scope="col">Sample or classification</th><th scope="col">Technical details</th><th scope="col">Coordinates</th></tr></thead><tbody>
 <tr><td>Human / P37231</td><td><a href="https://www.rcsb.org/structure/1FM6">1FM6</a></td><td>THE 2.1 ANGSTROM RESOLUTION CRYSTAL STRUCTURE OF THE HETERODIMER OF THE HUMAN RXRALPHA AND PPARGAMMA LIGAND BINDING DOMAINS RESPECTIVELY BOUND WITH 9-CIS RETINOIC ACID AND ROSIGLITAZONE AND CO-ACTIVATOR PEPTIDES.</td><td>Polymer entities — STEROID RECEPTOR COACTIVATOR | PEROXISOME PROLIFERATOR ACTIVATED RECEPTOR GAMMA | RETINOIC ACID RECEPTOR RXR-ALPHA · CCD — 9CR, BRL · Released 2001-02-16 · 2.1 Å</td><td><a href="https://files.rcsb.org/download/1FM6.cif">mmCIF</a></td></tr>
 <tr><td>Human / P37231</td><td><a href="https://www.rcsb.org/structure/1FM9">1FM9</a></td><td>THE 2.1 ANGSTROM RESOLUTION CRYSTAL STRUCTURE OF THE HETERODIMER OF THE HUMAN RXRALPHA AND PPARGAMMA LIGAND BINDING DOMAINS RESPECTIVELY BOUND WITH 9-CIS RETINOIC ACID AND GI262570 AND CO-ACTIVATOR PEPTIDES.</td><td>Polymer entities — STEROID RECEPTOR COACTIVATOR | PEROXISOME PROLIFERATOR ACTIVATED RECEPTOR GAMMA | RETINOIC ACID RECEPTOR RXR-ALPHA · CCD — 570, 9CR · Released 2001-02-16 · 2.1 Å</td><td><a href="https://files.rcsb.org/download/1FM9.cif">mmCIF</a></td></tr>
 <tr><td>Human / P37231</td><td><a href="https://www.rcsb.org/structure/1I7I">1I7I</a></td><td>CRYSTAL STRUCTURE OF THE LIGAND BINDING DOMAIN OF HUMAN PPAR-GAMMA IN COMPLEX WITH THE AGONIST AZ 242</td><td>Polymer entities — PEROXISOME PROLIFERATOR ACTIVATED RECEPTOR GAMMA · CCD — AZ2 · Released 2002-03-09 · 2.35 Å</td><td><a href="https://files.rcsb.org/download/1I7I.cif">mmCIF</a></td></tr>
@@ -1101,10 +1102,10 @@
 <tr><td>Human / P37231</td><td><a href="https://www.rcsb.org/structure/9V8F">9V8F</a></td><td>PPARgamma ligand-binding domain in complex with PG14</td><td>Polymer entities — PG14 | Peroxisome proliferator-activated receptor gamma · CCD — PEG · Released 2025-11-05 · 1.75 Å</td><td><a href="https://files.rcsb.org/download/9V8F.cif">mmCIF</a></td></tr>
 <tr><td>Human / P37231</td><td><a href="https://www.rcsb.org/structure/9V8G">9V8G</a></td><td>PPARgamma ligand-binding domain in complex with PG08-NL</td><td>Polymer entities — PG08-NL | Peroxisome proliferator-activated receptor gamma · CCD — PEG · Released 2025-11-05 · 1.39 Å</td><td><a href="https://files.rcsb.org/download/9V8G.cif">mmCIF</a></td></tr>
 <tr><td>Human / P37231</td><td><a href="https://www.rcsb.org/structure/9V8H">9V8H</a></td><td>PPARgamma ligand-binding domain in complex with PG08-NL and rosiglitazone</td><td>Polymer entities — PG08-NL | Peroxisome proliferator-activated receptor gamma · CCD — BRL, PGE, PEG · Released 2025-11-05 · 1.39 Å</td><td><a href="https://files.rcsb.org/download/9V8H.cif">mmCIF</a></td></tr>
-</tbody></table>
+</tbody></table></div>
 <h2>GCK</h2>
 <h3>Sources and datasets (15)</h3>
-<table><thead><tr><th scope="col">Target</th><th scope="col">Record</th><th scope="col">Method</th><th scope="col">Available data</th><th scope="col">Sample or coverage</th><th scope="col">Source</th></tr></thead><tbody>
+<div class="table-scroll" tabindex="0"><table><thead><tr><th scope="col">Target</th><th scope="col">Record</th><th scope="col">Method</th><th scope="col">Available data</th><th scope="col">Sample or coverage</th><th scope="col">Source</th></tr></thead><tbody>
 <tr><td>GCK</td><td>Larion et al. 2015</td><td>NMR / CPMG</td><td>Human pancreatic apo GCK, 509 ± 51 s⁻¹ and 16.5 ± 1.7% excited-state population from a global fit at 313 K. Glucose quenches the small-domain exchange.</td><td>Primary text and Fig. 1 confirm 313 K (approximately 40 °C). Fig. 2 has dispersion plots. Raw dispersion series and numeric per-residue profiles were not located.</td><td><a href="https://pmc-oa-opendata.s3.amazonaws.com/PMC4587531.1/PMC4587531.1.txt">Open source</a></td></tr>
 <tr><td>GCK</td><td>Larion et al. 2015 publisher</td><td>NMR</td><td>Primary CPMG paper and Supporting Information section.</td><td>Use Fig. 2 and Supporting Information for measurement conditions.</td><td><a href="https://doi.org/10.1002/anie.201501204">Open source</a></td></tr>
 <tr><td>GCK</td><td>Biochemical Methods to Map and Quantify Allosteric Motions</td><td>NMR / methods</td><td>Methods review reports 16.5% and 37 °C for the apo CPMG rate.</td><td>Use the primary paper’s 313 K for the Larion 2015 experiment.</td><td><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC10308428/">Open source</a></td></tr>
@@ -1120,9 +1121,9 @@
 <tr><td>GCK</td><td>1V4T</td><td>Coordinate reference</td><td>Human apo super-open GCK.</td><td>Sulfate and sodium are modeled. Residues 157–179 are absent in the deposited author numbering.</td><td><a href="https://www.rcsb.org/structure/1V4T">Open source</a></td></tr>
 <tr><td>GCK</td><td>3IDH</td><td>Coordinate reference</td><td>Human pancreatic GCK bound to glucose.</td><td>Glucose-bound comparator without a synthetic activator.</td><td><a href="https://www.rcsb.org/structure/3IDH">Open source</a></td></tr>
 <tr><td>GCK</td><td>UniProt P35557</td><td>Sequence</td><td>Canonical sequence and annotation.</td><td>Use species and exact construct when matching measurements.</td><td><a href="https://www.uniprot.org/uniprotkb/P35557/entry">Open source</a></td></tr>
-</tbody></table>
+</tbody></table></div>
 <h3>Individual files (14)</h3>
-<table><thead><tr><th scope="col">Target</th><th scope="col">Record</th><th scope="col">File</th><th scope="col">Contents</th><th scope="col">Size (bytes)</th></tr></thead><tbody>
+<div class="table-scroll" tabindex="0"><table><thead><tr><th scope="col">Target</th><th scope="col">Record</th><th scope="col">File</th><th scope="col">Contents</th><th scope="col">Size (bytes)</th></tr></thead><tbody>
 <tr><td>GCK</td><td>Larion 2015</td><td><a href="https://pmc-oa-opendata.s3.amazonaws.com/PMC4587531.1/PMC4587531.1.txt">Full primary article text</a></td><td>Verified primary text with global fit and acquisition temperature</td><td>—</td></tr>
 <tr><td>GCK</td><td>Larion 2012 Figshare</td><td><a href="https://ndownloader.figshare.com/files/283135">Figure_S1.eps</a></td><td>Published supplementary item</td><td>415,019</td></tr>
 <tr><td>GCK</td><td>Larion 2012 Figshare</td><td><a href="https://ndownloader.figshare.com/files/283184">Figure_S2.eps</a></td><td>Published supplementary item</td><td>304,069</td></tr>
@@ -1137,9 +1138,9 @@
 <tr><td>GCK</td><td>Sternisha 2018</td><td><a href="https://doi.org/10.1021/acs.biochem.8b00022.s001">Supporting Information</a></td><td>Published supplementary figures</td><td>—</td></tr>
 <tr><td>GCK</td><td>MaveDB 00000096-a-1</td><td><a href="https://api.mavedb.org/api/v1/score-sets/urn:mavedb:00000096-a-1/scores">Variant activity scores CSV</a></td><td>Verified CSV download</td><td>—</td></tr>
 <tr><td>GCK</td><td>MaveDB 00000096-b-1</td><td><a href="https://api.mavedb.org/api/v1/score-sets/urn:mavedb:00000096-b-1/scores">Variant abundance scores CSV</a></td><td>Verified CSV download</td><td>—</td></tr>
-</tbody></table>
+</tbody></table></div>
 <h3>PDB records (35)</h3>
-<table><thead><tr><th scope="col">Species / UniProt</th><th scope="col">PDB</th><th scope="col">Sample or classification</th><th scope="col">Technical details</th><th scope="col">Coordinates</th></tr></thead><tbody>
+<div class="table-scroll" tabindex="0"><table><thead><tr><th scope="col">Species / UniProt</th><th scope="col">PDB</th><th scope="col">Sample or classification</th><th scope="col">Technical details</th><th scope="col">Coordinates</th></tr></thead><tbody>
 <tr><td>Human / P35557</td><td><a href="https://www.rcsb.org/structure/1V4S">1V4S</a></td><td>Crystal structure of human glucokinase</td><td>Polymer entities — glucokinase isoform 2 · CCD — GLC, NA, MRK · Released 2004-03-30 · 2.3 Å</td><td><a href="https://files.rcsb.org/download/1V4S.cif">mmCIF</a></td></tr>
 <tr><td>Human / P35557</td><td><a href="https://www.rcsb.org/structure/1V4T">1V4T</a></td><td>Crystal structure of human glucokinase · Published apo super-open reference; sulfate and sodium ions</td><td>Polymer entities — glucokinase isoform 2 · CCD — SO4, NA · Released 2004-03-30 · 3.4 Å</td><td><a href="https://files.rcsb.org/download/1V4T.cif">mmCIF</a></td></tr>
 <tr><td>Human / P35557</td><td><a href="https://www.rcsb.org/structure/3A0I">3A0I</a></td><td>Human glucokinase in complex with a synthetic activator</td><td>Polymer entities — Glucokinase · CCD — NA, AJI, GLC · Released 2009-04-28 · 2.2 Å</td><td><a href="https://files.rcsb.org/download/3A0I.cif">mmCIF</a></td></tr>
@@ -1175,10 +1176,10 @@
 <tr><td>Human / P35557</td><td><a href="https://www.rcsb.org/structure/6E0I">6E0I</a></td><td>Crystal structure of Glucokinase in complex with compound 72</td><td>Polymer entities — Glucokinase · CCD — GLC, DMS, HKG · Released 2019-07-10 · 1.9 Å</td><td><a href="https://files.rcsb.org/download/6E0I.cif">mmCIF</a></td></tr>
 <tr><td>Human / P35557</td><td><a href="https://www.rcsb.org/structure/7T78">7T78</a></td><td>CRYSTAL STRUCTURE OF GLUCOKINASE (HEXOKINASE 4) COMPLEXED WITH LIGAND DIETHYL ({2-[3-(4-METHANESULFONYLPHENO XY)-5-{[(2S)-1-METHOXYPROPAN-2-YL]OXY}BENZAMIDO]-1,3-THIAZ OL-4-YL}METHYL)PHOSPHONATE</td><td>Polymer entities — Isoform 2 of Hexokinase-4 · CCD — GLC, NA, G2T, EDO · Released 2022-03-02 · 2.4 Å</td><td><a href="https://files.rcsb.org/download/7T78.cif">mmCIF</a></td></tr>
 <tr><td>Human / P35557</td><td><a href="https://www.rcsb.org/structure/7T79">7T79</a></td><td>CRYSTAL STRUCTURE OF GLUCOKINASE (HEXOKINASE 4) COMPLEXED WITH LIGAND AKA DIETHYL {[3-(3-{[5-(AZETIDINE-1-CARBON YL)PYRAZIN-2-YL]OXY}-5-(PROPAN-2-YLOXY)BENZAMIDO)-1H- PYRAZOL-1-YL]METHYL}PHOSPHONATE</td><td>Polymer entities — Isoform 2 of Hexokinase-4 · CCD — GLC, G1S · Released 2022-03-02 · 2.4 Å</td><td><a href="https://files.rcsb.org/download/7T79.cif">mmCIF</a></td></tr>
-</tbody></table>
+</tbody></table></div>
 <h2>AURKA</h2>
 <h3>Sources and datasets (21)</h3>
-<table><thead><tr><th scope="col">Target</th><th scope="col">Record</th><th scope="col">Method</th><th scope="col">Available data</th><th scope="col">Sample or coverage</th><th scope="col">Source</th></tr></thead><tbody>
+<div class="table-scroll" tabindex="0"><table><thead><tr><th scope="col">Target</th><th scope="col">Record</th><th scope="col">Method</th><th scope="col">Available data</th><th scope="col">Sample or coverage</th><th scope="col">Source</th></tr></thead><tbody>
 <tr><td>AURKA</td><td>Zenodo 825693</td><td>Single-molecule fluorescence</td><td>2017 phosphorylated Aurora A single-molecule intensity distributions with apo, ligands and controls.</td><td>Raw and partially processed. The assay uses TMR self-quenching.</td><td><a href="https://zenodo.org/records/825693">Open source</a></td></tr>
 <tr><td>AURKA</td><td>Zenodo 825752</td><td>Single-molecule fluorescence</td><td>2017 phosphorylated Aurora A dwell-time traces.</td><td>Raw and partially processed. The assay uses TMR self-quenching.</td><td><a href="https://zenodo.org/records/825752">Open source</a></td></tr>
 <tr><td>AURKA</td><td>Zenodo 2555379</td><td>Single-molecule fluorescence</td><td>2019 unphosphorylated apo and ligand/TPX2 files, dwell times, plus matched phosphorylated data under a second probe.</td><td>Raw and partially processed. The assay uses TMR self-quenching.</td><td><a href="https://zenodo.org/records/2555379">Open source</a></td></tr>
@@ -1200,9 +1201,9 @@
 <tr><td>AURKA</td><td>SASDXX7</td><td>SAXS</td><td>N-Myc proto-oncogene residues 1-69 in complex with Aurora kinase A mutant C290A:C393A</td><td>Archive contains I(q), uncertainty, sample conditions and associated files.</td><td><a href="https://www.sasbdb.org/data/SASDXX7/">Open source</a></td></tr>
 <tr><td>AURKA</td><td>SASDXY7</td><td>SAXS</td><td>N-Myc proto-oncogene residues 1-100 in complex with Aurora kinase A mutant C290A:C393A</td><td>Archive contains I(q), uncertainty, sample conditions and associated files.</td><td><a href="https://www.sasbdb.org/data/SASDXY7/">Open source</a></td></tr>
 <tr><td>AURKA</td><td>UniProt O14965</td><td>Sequence</td><td>Canonical sequence and annotation.</td><td>Use species and exact construct when matching measurements.</td><td><a href="https://www.uniprot.org/uniprotkb/O14965/entry">Open source</a></td></tr>
-</tbody></table>
+</tbody></table></div>
 <h3>Individual files (48)</h3>
-<table><thead><tr><th scope="col">Target</th><th scope="col">Record</th><th scope="col">File</th><th scope="col">Contents</th><th scope="col">Size (bytes)</th></tr></thead><tbody>
+<div class="table-scroll" tabindex="0"><table><thead><tr><th scope="col">Target</th><th scope="col">Record</th><th scope="col">File</th><th scope="col">Contents</th><th scope="col">Size (bytes)</th></tr></thead><tbody>
 <tr><td>AURKA</td><td>Zenodo 825693</td><td><a href="https://zenodo.org/api/records/825693/files/Kemptide.zip/content">Kemptide.zip</a></td><td>Archive-listed download</td><td>2,392,710,390</td></tr>
 <tr><td>AURKA</td><td>Zenodo 825693</td><td><a href="https://zenodo.org/api/records/825693/files/Unliganded%20kinase.zip/content">Unliganded kinase.zip</a></td><td>Archive-listed download</td><td>10,595,792,816</td></tr>
 <tr><td>AURKA</td><td>Zenodo 825693</td><td><a href="https://zenodo.org/api/records/825693/files/Collected%20data%20and%20analysis%20files%20for%20KC%20SC%20binding%20partners.zip/content">Collected data and analysis files for KC SC binding partners.zip</a></td><td>Archive-listed download</td><td>4,444,471</td></tr>
@@ -1251,9 +1252,9 @@
 <tr><td>AURKA</td><td>PXD062561</td><td><a href="https://ftp.pride.ebi.ac.uk/pride/data/archive/2026/01/PXD062561/HDExaminer_files.zip">HDExaminer_files.zip</a></td><td>Other type file URI</td><td>26,016,907</td></tr>
 <tr><td>AURKA</td><td>PXD062561</td><td><a href="https://ftp.pride.ebi.ac.uk/pride/data/archive/2026/01/PXD062561/HDEx_Aurora_pool.csv">HDEx_Aurora_pool.csv</a></td><td>Search engine output file URI</td><td>2,962</td></tr>
 <tr><td>AURKA</td><td>PXD062561</td><td><a href="https://ftp.pride.ebi.ac.uk/pride/data/archive/2026/01/PXD062561/PXD062561_community_annotated.sdrf.tsv">PXD062561_community_annotated.sdrf.tsv</a></td><td>Experimental design file URI</td><td>1,534</td></tr>
-</tbody></table>
+</tbody></table></div>
 <h3>PDB records (202)</h3>
-<table><thead><tr><th scope="col">Species / UniProt</th><th scope="col">PDB</th><th scope="col">Sample or classification</th><th scope="col">Technical details</th><th scope="col">Coordinates</th></tr></thead><tbody>
+<div class="table-scroll" tabindex="0"><table><thead><tr><th scope="col">Species / UniProt</th><th scope="col">PDB</th><th scope="col">Sample or classification</th><th scope="col">Technical details</th><th scope="col">Coordinates</th></tr></thead><tbody>
 <tr><td>Human / O14965</td><td><a href="https://www.rcsb.org/structure/1MQ4">1MQ4</a></td><td>Crystal Structure of Aurora-A Protein Kinase</td><td>Polymer entities — AURORA-RELATED KINASE 1 · CCD — MG, PO4, ADP · Released 2003-09-16 · 1.9 Å</td><td><a href="https://files.rcsb.org/download/1MQ4.cif">mmCIF</a></td></tr>
 <tr><td>Human / O14965</td><td><a href="https://www.rcsb.org/structure/1MUO">1MUO</a></td><td>CRYSTAL STRUCTURE OF AURORA-2, AN ONCOGENIC SERINE-THREONINE KINASE</td><td>Polymer entities — Aurora-related kinase 1 · CCD — ADN · Released 2003-04-15 · 2.9 Å</td><td><a href="https://files.rcsb.org/download/1MUO.cif">mmCIF</a></td></tr>
 <tr><td>Human / O14965</td><td><a href="https://www.rcsb.org/structure/1OL5">1OL5</a></td><td>Structure of Aurora-A 122-403, phosphorylated on Thr287, Thr288 and bound to TPX2 1-43</td><td>Polymer entities — RESTRICTED EXPRESSION PROLIFERATION ASSOCIATED PROTEIN 100 | SERINE/THREONINE KINASE 6 · CCD — ADP, MG, SO4 · Released 2003-10-30 · 2.5 Å</td><td><a href="https://files.rcsb.org/download/1OL5.cif">mmCIF</a></td></tr>
@@ -1456,10 +1457,10 @@
 <tr><td>Human / O14965</td><td><a href="https://www.rcsb.org/structure/9SQ7">9SQ7</a></td><td>Crystal structure of Aurora-A bound to DBS2</td><td>Polymer entities — Aurora kinase A | DBS2 · CCD — ADP, MG · Released 2026-07-22 · 2.899 Å</td><td><a href="https://files.rcsb.org/download/9SQ7.cif">mmCIF</a></td></tr>
 <tr><td>Human / O14965</td><td><a href="https://www.rcsb.org/structure/9SUY">9SUY</a></td><td>TPX2 7-20 fused to Aurora-A residues 116-389, covalently modified on Cys290 by F104 (7-((perfluorophenyl)sulfonyl)-3-(trifluoromethyl)-5,6,7,8-tetrahydro-[1,2,4]triazolo[4,3-a]pyrazine)</td><td>Polymer entities — Targeting protein for Xklp2,Aurora kinase A · CCD — ADP, A1JQV, GOL, PGE, MES, MG · Released 2026-03-18 · 2.27 Å</td><td><a href="https://files.rcsb.org/download/9SUY.cif">mmCIF</a></td></tr>
 <tr><td>Human / O14965</td><td><a href="https://www.rcsb.org/structure/9SV0">9SV0</a></td><td>Crystal structure of Aurora-A bound to DBS4</td><td>Polymer entities — Aurora kinase A | DBS4 · CCD — MPO, MG, PO4, ADP · Released 2026-07-22 · 2.23 Å</td><td><a href="https://files.rcsb.org/download/9SV0.cif">mmCIF</a></td></tr>
-</tbody></table>
+</tbody></table></div>
 <h2>ERK2</h2>
 <h3>Sources and datasets (24)</h3>
-<table><thead><tr><th scope="col">Target</th><th scope="col">Record</th><th scope="col">Method</th><th scope="col">Available data</th><th scope="col">Sample or coverage</th><th scope="col">Source</th></tr></thead><tbody>
+<div class="table-scroll" tabindex="0"><table><thead><tr><th scope="col">Target</th><th scope="col">Record</th><th scope="col">Method</th><th scope="col">Available data</th><th scope="col">Sample or coverage</th><th scope="col">Source</th></tr></thead><tbody>
 <tr><td>ERK2</td><td>Xiao et al. 2014</td><td>NMR / CPMG</td><td>Rat apo 2P global R/L exchange at ~300 s⁻¹ and 80:20 (R:L) at 25 °C; 0P local motions.</td><td>Published fits and curves. Raw 2014 relaxation-dispersion series not located.</td><td><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC3932853/">Open source</a></td></tr>
 <tr><td>ERK2</td><td>Xiao et al. 2015</td><td>NMR / methyl assignments</td><td>Published ILV assignments for active and inactive ERK2.</td><td>Use the paper and assignment supplements.</td><td><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC4943881/">Open source</a></td></tr>
 <tr><td>ERK2</td><td>Iverson et al. 2020</td><td>NMR / CPMG</td><td>Activation-loop methyl probes coupled to global motions of the 2P kinase.</td><td>Supporting Information linked separately.</td><td><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC7867030/">Open source</a></td></tr>
@@ -1484,9 +1485,9 @@
 <tr><td>ERK2</td><td>PXD048311 file index</td><td>Download directory</td><td>HTTP directory of all files in the archive release.</td><td>Direct links for each file are in Individual downloads.</td><td><a href="https://ftp.pride.ebi.ac.uk/pride/data/archive/2024/03/PXD048311/">Open source</a></td></tr>
 <tr><td>ERK2 human</td><td>UniProt P28482</td><td>Sequence</td><td>Canonical sequence and annotation.</td><td>Use species and exact construct when matching measurements.</td><td><a href="https://www.uniprot.org/uniprotkb/P28482/entry">Open source</a></td></tr>
 <tr><td>ERK2 rat</td><td>UniProt P63086</td><td>Sequence</td><td>Canonical sequence and annotation.</td><td>Use species and exact construct when matching measurements.</td><td><a href="https://www.uniprot.org/uniprotkb/P63086/entry">Open source</a></td></tr>
-</tbody></table>
+</tbody></table></div>
 <h3>Individual files (106)</h3>
-<table><thead><tr><th scope="col">Target</th><th scope="col">Record</th><th scope="col">File</th><th scope="col">Contents</th><th scope="col">Size (bytes)</th></tr></thead><tbody>
+<div class="table-scroll" tabindex="0"><table><thead><tr><th scope="col">Target</th><th scope="col">Record</th><th scope="col">File</th><th scope="col">Contents</th><th scope="col">Size (bytes)</th></tr></thead><tbody>
 <tr><td>ERK2</td><td>Iverson 2020</td><td><a href="https://doi.org/10.1021/acs.biochem.0c00485.s001">Supporting Information</a></td><td>Publisher supplemental PDF</td><td>—</td></tr>
 <tr><td>ERK2</td><td>BMRbig96</td><td><a href="https://bmrbig.bmrb.io/deposition/released/96/bmr52263_3.str">bmr52263_3.str</a></td><td>Table or NMR metadata</td><td>—</td></tr>
 <tr><td>ERK2</td><td>BMRbig96</td><td><a href="https://bmrbig.bmrb.io/deposition/released/96/bmrbig96.str">bmrbig96.str</a></td><td>Table or NMR metadata</td><td>—</td></tr>
@@ -1593,9 +1594,9 @@
 <tr><td>ERK2</td><td>PXD048311</td><td><a href="https://ftp.pride.ebi.ac.uk/pride/data/archive/2024/03/PXD048311/representative_clusterdata_2P_WT_ERK2.csv">representative_clusterdata_2P_WT_ERK2.csv</a></td><td>Processed data or analysis table</td><td>—</td></tr>
 <tr><td>ERK2</td><td>PXD048311</td><td><a href="https://ftp.pride.ebi.ac.uk/pride/data/archive/2024/03/PXD048311/representative_spectrum_0P_WT_ERK2.raw.zip">representative_spectrum_0P_WT_ERK2.raw.zip</a></td><td>Representative instrument raw data</td><td>—</td></tr>
 <tr><td>ERK2</td><td>PXD048311</td><td><a href="https://ftp.pride.ebi.ac.uk/pride/data/archive/2024/03/PXD048311/representative_spectrum_2P_WT_ERK2.raw.zip">representative_spectrum_2P_WT_ERK2.raw.zip</a></td><td>Representative instrument raw data</td><td>—</td></tr>
-</tbody></table>
+</tbody></table></div>
 <h3>PDB records (253)</h3>
-<table><thead><tr><th scope="col">Species / UniProt</th><th scope="col">PDB</th><th scope="col">Sample or classification</th><th scope="col">Technical details</th><th scope="col">Coordinates</th></tr></thead><tbody>
+<div class="table-scroll" tabindex="0"><table><thead><tr><th scope="col">Species / UniProt</th><th scope="col">PDB</th><th scope="col">Sample or classification</th><th scope="col">Technical details</th><th scope="col">Coordinates</th></tr></thead><tbody>
 <tr><td>Human / P28482</td><td><a href="https://www.rcsb.org/structure/1PME">1PME</a></td><td>STRUCTURE OF PENTA MUTANT HUMAN ERK2 MAP KINASE COMPLEXED WITH A SPECIFIC INHIBITOR OF HUMAN P38 MAP KINASE</td><td>Polymer entities — ERK2 · CCD — SO4, SB2 · Released 1999-06-08 · 2 Å</td><td><a href="https://files.rcsb.org/download/1PME.cif">mmCIF</a></td></tr>
 <tr><td>Human / P28482</td><td><a href="https://www.rcsb.org/structure/1TVO">1TVO</a></td><td>The structure of ERK2 in complex with a small molecule inhibitor</td><td>Polymer entities — Mitogen-activated protein kinase 1 · CCD — FRZ · Released 2005-09-13 · 2.5 Å</td><td><a href="https://files.rcsb.org/download/1TVO.cif">mmCIF</a></td></tr>
 <tr><td>Human / P28482</td><td><a href="https://www.rcsb.org/structure/1WZY">1WZY</a></td><td>Crystal structure of human ERK2 complexed with a pyrazolopyridazine derivative</td><td>Polymer entities — Mitogen-activated protein kinase 1 · CCD — F29 · Released 2005-12-20 · 2.5 Å</td><td><a href="https://files.rcsb.org/download/1WZY.cif">mmCIF</a></td></tr>
@@ -1849,6 +1850,6 @@
 <tr><td>Rat / P63086</td><td><a href="https://www.rcsb.org/structure/9SXZ">9SXZ</a></td><td>Crystal structure of ERK2 in complex with a ligand</td><td>Polymer entities — Mitogen-activated protein kinase 1 · CCD — DMS, SO4, A1JRU · Released 2026-10-21 · 1.5 Å</td><td><a href="https://files.rcsb.org/download/9SXZ.cif">mmCIF</a></td></tr>
 <tr><td>Rat / P63086</td><td><a href="https://www.rcsb.org/structure/9SY0">9SY0</a></td><td>Crystal structure of ERK2 in complex with a ligand</td><td>Polymer entities — Mitogen-activated protein kinase 1 · CCD — DMS, SO4, A1JRV · Released 2026-10-21 · 1.55 Å</td><td><a href="https://files.rcsb.org/download/9SY0.cif">mmCIF</a></td></tr>
 <tr><td>Rat / P63086</td><td><a href="https://www.rcsb.org/structure/9SY2">9SY2</a></td><td>Crystal structure of ERK2 in complex with a ligand</td><td>Polymer entities — Mitogen-activated protein kinase 1 · CCD — A1JRW, DMS, SO4 · Released 2026-10-21 · 1.62 Å</td><td><a href="https://files.rcsb.org/download/9SY2.cif">mmCIF</a></td></tr>
-</tbody></table>
+</tbody></table></div>
 </body>
 </html>
